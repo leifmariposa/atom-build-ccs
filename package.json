@@ -1,0 +1,49 @@
+{
+  "name": "build-ccs",
+  "version": "0.0.0",
+  "description": "Atom Build provider for Code Composer Studio",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leifmariposa/atom-build-ccs.git"
+  },
+  "license": "MIT",
+  "keywords": [
+    "build",
+    "compile",
+    "ccs"
+  ],
+  "main": "lib/provider.js",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "providedServices": {
+    "builder": {
+      "description": "Compiles CCS project",
+      "versions": {
+        "2.0.0": "provideBuilder"
+      }
+    }
+  },
+  "package-deps": [
+    "build"
+  ],
+  "dependencies": {
+    "atom-package-deps": "^4.3.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.0.0",
+    "coffeelint-stylish": "^0.1.2",
+    "eslint": "^3.7.0",
+    "eslint-config-atom-build": "^4.0.0",
+    "gulp": "^3.9.1",
+    "gulp-coffeelint": "^0.6.0",
+    "gulp-debug": "^2.1.2",
+    "gulp-jshint": "^2.0.1",
+    "gulp-jsonlint": "^1.1.2",
+    "gulp-lesshint": "^2.0.0",
+    "jshint": "^2.9.3"
+  },
+  "scripts": {
+    "test": "gulp lint"
+  }
+}
